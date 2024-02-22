@@ -1,0 +1,49 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Avatar with Badges */
+
+.avatar_badge {
+  position: relative;
+  display: inline-block;
+
+  &:before {
+    content: "";
+    position: absolute;
+    bottom: 0.5px;
+    right: 0.5px;
+    width: 16px;
+    height: 16px;
+    border-radius: 100%;
+    border: 1px solid #fff;
+  }
+  &.online:before {
+    background-color: lime;
+  }
+  &.busy:before {
+    background-color: orange;
+  }
+  &.dnd:before {
+    background-color: rgb(226, 69, 69);
+  }
+  &.offline:before {
+    background-color: rgb(161, 160, 160);
+  }
+}
+
+.avatar_badge img {
+  border-radius: 50%;
+  overflow: hidden;
+  border: 2.5px solid #ffffff;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  object-fit: cover;
+}
+
+.avatar_badge div {
+  border-radius: 50%;
+  overflow: hidden;
+  border: 2.5px solid #ffffff;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  object-fit: cover;
+}
